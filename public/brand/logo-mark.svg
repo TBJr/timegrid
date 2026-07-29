@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="TimeGrid">
+  <rect width="64" height="64" rx="16" fill="#0F766E"/>
+  <rect x="10" y="12" width="12" height="40" rx="3" fill="#CCFBF1" opacity="0.28"/>
+  <rect x="26" y="12" width="12" height="40" rx="3" fill="#CCFBF1" opacity="0.55"/>
+  <rect x="42" y="12" width="12" height="40" rx="3" fill="#CCFBF1" opacity="0.28"/>
+  <rect x="10" y="28" width="44" height="8" rx="2" fill="#F59E0B"/>
+  <circle cx="32" cy="32" r="3.5" fill="#FFF7ED"/>
+</svg>

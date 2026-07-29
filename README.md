@@ -37,6 +37,14 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run lint` | Run ESLint |
 | `npm run typecheck` | Run TypeScript without emitting |
 
+## Brand assets
+
+Logo, favicon, and social image sources live in `public/brand/`. Regenerated raster assets:
+
+```bash
+npm run brand:assets
+```
+
 ## Credits
 
 Built by [Thomas Brown](https://github.com/tbjr) · Made by [Evolvtech, LLC](https://evolvtech.org/).

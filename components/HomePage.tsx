@@ -7,6 +7,7 @@ import { AvailabilityPoll } from "@/components/AvailabilityPoll";
 import { CommandPalette } from "@/components/CommandPalette";
 import { DateControls } from "@/components/DateControls";
 import { DateStrip } from "@/components/DateStrip";
+import { Logo } from "@/components/Logo";
 import { QuickAddZone } from "@/components/QuickAddZone";
 import { SelectionSummary } from "@/components/SelectionSummary";
 import { SettingsPanel } from "@/components/SettingsPanel";
@@ -242,6 +243,7 @@ export function HomePage({ initialUrlState, initialShareMode, initialProtectedPa
     <main className="mx-auto flex min-h-screen w-full max-w-[1800px] flex-col gap-5 px-4 py-5 sm:px-6 lg:px-8">
       {locked ? (
         <section className="mx-auto mt-20 grid w-full max-w-lg gap-4 rounded-lg border border-border bg-card p-5 shadow-soft">
+          <Logo className="text-primary" />
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/12 text-primary">
               <LockKeyhole className="h-5 w-5" />
@@ -280,7 +282,7 @@ export function HomePage({ initialUrlState, initialShareMode, initialProtectedPa
         <>
       <header className="flex flex-col gap-4 rounded-lg border border-border bg-card/92 p-4 shadow-soft backdrop-blur md:flex-row md:items-center md:justify-between">
         <div>
-          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.24em] text-primary">TimeGrid</p>
+          <Logo className="mb-3 text-primary" markClassName="h-9 w-9" />
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Plan across time zones without the clutter.</h1>
           <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
             Compare cities, find humane overlap, and share meeting windows that survive daylight saving shifts.
