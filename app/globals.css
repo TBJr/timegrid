@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 48 33% 98%;
+  --foreground: 222 36% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 36% 13%;
+  --muted: 210 30% 95%;
+  --muted-foreground: 215 14% 42%;
+  --border: 214 24% 88%;
+  --primary: 188 76% 32%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 36 94% 57%;
+  --accent-foreground: 222 36% 13%;
+  --destructive: 0 77% 54%;
+}
+
+.dark {
+  --background: 222 26% 10%;
+  --foreground: 210 25% 94%;
+  --card: 221 24% 14%;
+  --card-foreground: 210 25% 94%;
+  --muted: 221 18% 20%;
+  --muted-foreground: 215 16% 70%;
+  --border: 220 18% 26%;
+  --primary: 184 70% 44%;
+  --primary-foreground: 222 36% 10%;
+  --accent: 39 92% 58%;
+  --accent-foreground: 222 36% 10%;
+  --destructive: 0 70% 60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 18% -8%, rgb(20 184 166 / 0.12), transparent 28rem),
+    linear-gradient(180deg, hsl(var(--background)), hsl(var(--background)));
+  color: hsl(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.24);
+}
+
+.timegrid-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground) / 0.4) transparent;
+}
+
+.timegrid-scrollbar::-webkit-scrollbar {
+  height: 10px;
+}
+
+.timegrid-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.32);
+  border-radius: 999px;
+}
