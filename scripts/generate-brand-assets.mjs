@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import sharp from "sharp";
-import toIco from "to-ico";
+import pngToIco from "png-to-ico";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -79,7 +79,7 @@ async function main() {
 
   const png16 = await sharp(markSvg, { density: 384 }).resize(16, 16).png().toBuffer();
   const png32 = await sharp(markSvg, { density: 384 }).resize(32, 32).png().toBuffer();
-  const ico = await toIco([png16, png32]);
+  const ico = await pngToIco([png16, png32]);
   fs.writeFileSync(path.join(root, "app/favicon.ico"), ico);
   fs.writeFileSync(path.join(root, "public/favicon.ico"), ico);
   console.log("wrote favicon.ico");
